@@ -1,0 +1,39 @@
+.sidebar {
+    background-color: $color-primary;
+
+    grid-column: sidebar-start/sidebar-end;
+    grid-row: 1/-1;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-row: 1/2;
+        grid-column: 1/-1;
+    }
+
+    &__icon-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        @media only screen and (max-width: $bp-large) {
+            justify-content: flex-end;
+            align-items: center;
+            margin: 2rem;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+    }
+
+    &__menu {
+        color: $color-white;
+        height: 6rem;
+        width: 6rem;
+
+        @media only screen and (max-width: $bp-large) {
+            height: 4rem;
+            width: 4rem;
+            transform: translateY(-0.7rem);
+        }
+    }
+}
